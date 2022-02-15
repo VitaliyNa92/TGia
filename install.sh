@@ -17,11 +17,15 @@ touch Telegram.desktop
 
 echo "[Desktop Entry]" >> Telegram.desktop
 echo "Version=1.0" >> Telegram.desktop
-echo "Type=Application" >> Telegram.desktop
-echo "Name=Telegram" >> Telegram.desktop
-echo "Exec=telegram-desktop" >> Telegram.desktop
+echo "Name=Telegram Desktop" >> Telegram.desktop
+echo "Comment=Official desktop version of Telegram messaging app" >> Telegram.desktop
+echo "Exec=tgia  -- %u" >> Telegram.desktop
 echo "Icon="$HOME"/.local/share/applications/tg.png" >> Telegram.desktop
-echo "StartupNotify=true" >> Telegram.desktop
+echo "Terminal=false" >> Telegram.desktop
+echo "StartupWMClass=TelegramDesktop" >> Telegram.desktop
+echo "Type=Application" >> Telegram.desktop
+echo "Categories=Network;InstantMessaging;Qt;" >> Telegram.desktop
+echo "MimeType=x-scheme-handler/telegram-desktop;" >> Telegram.desktop
  
 
 mv ~/TGia/tg.png ~/.local/share/applications/
